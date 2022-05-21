@@ -5,7 +5,7 @@ const mysql = require('mysql2/promise');
     host: 'localhost',
     port: 3306,
     user: 'admin',
-    password: '12345',
+    password: '',
     database: 'node_course',
   });
 
