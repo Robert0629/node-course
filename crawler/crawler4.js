@@ -14,5 +14,17 @@ require('dotenv').config();
   let [data, fields] = await connection.execute('SELECT * FROM stocks');
   console.log(data);
 
+  let mapResult = data.map(async(stock) => {
+   let reponse = await axios.get('https://www.twse.com.tw/exchangeReport/STOCK_DAY', {
+    params: {
+      // 設定 query string
+      response: 'json',
+      date: '20220301',
+      stockNo: '2330',
+    },
+  });
+  return 
+  })
+
   connection.end();
 })();
